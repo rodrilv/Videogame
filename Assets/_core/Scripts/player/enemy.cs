@@ -10,7 +10,7 @@ public class enemy : MonoBehaviour
     public BoxCollider2D bx;
     public AudioSource Sonido;
     public bool sePuedePisar = true;
-    int puntos = 100;
+    public int puntos = 100;
     public void HacerDaño(){
 
         
