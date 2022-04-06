@@ -1315,7 +1315,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.47021222, b: 1, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2199,8 +2199,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1562810465
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!224 &675758545
@@ -4851,6 +4851,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monedas: 0
+  camera: {fileID: 519420031}
+  playerParent: {fileID: 7702865}
   Player: {fileID: 709567184}
   nivelActual: {fileID: 0}
   vidasList:
@@ -4859,6 +4861,7 @@ MonoBehaviour:
   - {fileID: 1272871497}
   monedasText: {fileID: 1105860324}
   puntosText: {fileID: 1495007245}
+  slmenu: {fileID: 1480580407}
   puntosText_Efecto: {fileID: 675758546}
   puntos: 0
   gameOverMenu: {fileID: 701308683}
@@ -5036,6 +5039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45cbbd5ae88b3984e804b4705599053b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flag: 1
 --- !u!1 &1495007243
 GameObject:
   m_ObjectHideFlags: 0
@@ -6346,7 +6350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e2e900e34d7834186749b7199fce56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nivelActual: 3
+  nivelActual: 4
   loadingMenu: {fileID: 599791687}
 --- !u!1 &1831688252
 GameObject:

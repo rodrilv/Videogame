@@ -86,11 +86,12 @@ public class player : MonoBehaviour
     }
     private void HacerDano()
     {
-        Vidas --;
+        if(Vidas == 0 ){ PlayerMovement.bloquearMovimiento = true; PlayerMovement.rb.velocity = Vector2.zero;  }else {Vidas --;}
         esInmune = true;
         GameManager.Instancia.QuitarVida(Vidas);
         if (Vidas <= 0)
         {
+            
             GameManager.Instancia.GameOver(true);
         }
         //1

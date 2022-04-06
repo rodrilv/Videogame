@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SeleccionNivelMenu : MonoBehaviour
 {
-    private bool flag = true;
+    public bool flag = true;
 
     public void ManageMenu(){
         if(flag == true){

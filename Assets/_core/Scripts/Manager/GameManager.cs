@@ -6,11 +6,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int monedas = 0;
+    public Camera camera;
+    public GameObject playerParent;
     public player Player;
     public Nivel nivelActual;
     public List<vida> vidasList;
     public TextMeshProUGUI monedasText;
     public TextMeshProUGUI puntosText;
+    public SeleccionNivelMenu slmenu;
     
 
     public PuntosEfecto puntosText_Efecto;
@@ -26,6 +29,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Instancia = this;
+        
     }
 
     // Update is called once per frame

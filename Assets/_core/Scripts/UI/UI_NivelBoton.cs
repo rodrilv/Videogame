@@ -26,6 +26,7 @@ public class UI_NivelBoton : MonoBehaviour
         GameManager.Instancia.AbrirMenuNivel(false);
         GameManager.Instancia.OnGameReset();
         LevelManager.Instancia.CargarNivel(nivel);
+        GameManager.Instancia.slmenu.flag = true;
 
         
         
