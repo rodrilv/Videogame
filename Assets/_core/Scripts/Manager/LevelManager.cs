@@ -13,8 +13,12 @@ public class LevelManager : MonoBehaviour
     {
         
         Instancia = this;
+
         SceneManager.sceneUnloaded += TerminoDeQuitarEscena;
         SceneManager.sceneLoaded += EscenaTerminoDeCargar;
+
+        loadingMenu.gameObject.SetActive(true);
+        SceneManager.LoadScene("Nivel_" + nivelActual, LoadSceneMode.Additive);
         clima();
     }
     
