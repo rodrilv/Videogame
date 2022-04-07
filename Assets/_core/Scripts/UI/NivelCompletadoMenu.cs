@@ -33,7 +33,8 @@ public class NivelCompletadoMenu : MonoBehaviour
     }
     public void OnOkClick(){
         GameManager.Instancia.NivelCompletado(false);
-        LevelManager.Instancia.SiguienteNivel();   
+        LevelManager.Instancia.SiguienteNivel(); 
+        AudioManager.Instancia.Audio_Entorno_1(false);  
     }
 
     public void ResetMenu(){

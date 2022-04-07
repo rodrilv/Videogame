@@ -7,7 +7,8 @@ public enum BloqueType
 {
     Monedas = 0,
     Hongos,
-    FlorFuego
+    FlorFuego,
+    Corazon
 }
 
 
@@ -22,6 +23,7 @@ public class BloqueEspecial : MonoBehaviour
     public BloqueType tipo;
     public Animator anim;
     public GameObject moneda;
+    public GameObject corazon;
 
     public bool active = true;
     void Start()
@@ -38,19 +40,23 @@ public class BloqueEspecial : MonoBehaviour
         
             active = false;
             sp.sprite = spApagado;
-            anim.Play("BloqueSalto");
+            
 
         if(tipo == BloqueType.Monedas){
+            anim.Play("BloqueSalto");
             AnimarMoneda();
 
         }else if(tipo == BloqueType.Hongos){
 
         }else if( tipo == BloqueType.FlorFuego){
 
+        }else if(tipo == BloqueType.Corazon){
+            anim.Play("BloqueCorazon");
+            AnimarCorazon();
         }
 
     }
-    public float monedaSaltoTime;
+    public float monedaSaltoTime, corazonSaltoTime;
 
     public void AnimarMoneda(){
         GameManager.Instancia.AgregarMoneda();
@@ -61,5 +67,15 @@ public class BloqueEspecial : MonoBehaviour
         moneda.transform.DOLocalMove(new Vector2(0, 0.5f), monedaSaltoTime)
         .SetDelay(0.1f).
         OnComplete( () => moneda.SetActive(false));
+    }
+    public void AnimarCorazon(){
+        corazon.transform.DOLocalMove(new Vector2(0, 2f), corazonSaltoTime)
+        .OnComplete(CorazonOnComplete);
+
+    }
+    public void CorazonOnComplete(){
+        corazon.transform.DOLocalMove(new Vector2(0, 0.5f), corazonSaltoTime)
+        .SetDelay(0.1f)
+        .OnComplete( () => corazon.SetActive(GameManager.Instancia.AgregarVida(GameManager.Instancia.Player.Vidas)));
     }
 }

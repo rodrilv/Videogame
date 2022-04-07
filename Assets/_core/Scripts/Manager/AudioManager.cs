@@ -55,4 +55,12 @@ public class AudioManager : MonoBehaviour
     public void Audio_BalaCanon_Dispara(){
         Sonidos[13].Play();
     }
+    public void Audio_Entorno_1(bool status){
+        if(status == true){
+            Sonidos[14].Play();
+        }else{
+            Sonidos[14].Stop();
+        }
+        
+    }
 }

@@ -29,10 +29,18 @@ public class LevelManager : MonoBehaviour
     public void SiguienteNivel()
     {   
         GameManager.Instancia.OnGameReset();
-        GameManager.Instancia.Player.transform.parent = GameManager.Instancia.playerParent.transform;   
+        GameManager.Instancia.Player.transform.parent = GameManager.Instancia.playerParent.transform;
+        if(nivelActual < 5){   
         SceneManager.UnloadSceneAsync("Nivel_" + nivelActual);
         nivelActual += 1;
-        clima();
+        clima();}
+        else{ 
+            GameManager.Instancia.LootUI.gameObject.SetActive(false);
+            SceneManager.UnloadSceneAsync("Nivel_" + nivelActual);
+            nivelActual = 1;
+
+  }
+
     }
 
     private void TerminoDeQuitarEscena(Scene scene)
@@ -63,6 +71,8 @@ public class LevelManager : MonoBehaviour
             GameManager.Instancia.camera.backgroundColor = new Color(0.1f, 0.1f, 0.1f);
         }else if(nivelActual == 4){
             GameManager.Instancia.camera.backgroundColor = new Color(0.1f, 0.1f, 0.1f);
+        }else if(nivelActual == 5){
+            GameManager.Instancia.camera.backgroundColor = new Color(0.0f, 0.0f, 0.0f);
         }
     }
 }

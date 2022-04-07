@@ -27,6 +27,7 @@ public class UI_NivelBoton : MonoBehaviour
         GameManager.Instancia.OnGameReset();
         LevelManager.Instancia.CargarNivel(nivel);
         GameManager.Instancia.slmenu.flag = true;
+        AudioManager.Instancia.Audio_Entorno_1(false);
 
         
         

@@ -154,8 +154,8 @@ public class player : MonoBehaviour
     }
     public void EsCorazon(Collider2D other){
         //other.gameObject.
-        other.gameObject.SetActive(false);
-        GameManager.Instancia.AgregarVida(Vidas);
+        other.gameObject.SetActive(GameManager.Instancia.AgregarVida(Vidas));
+        //GameManager.Instancia.AgregarVida(Vidas);
     }
     public void EsResorte(Collider2D other){
         PlayerMovement.rb.AddForce(new Vector2(0, 2000));

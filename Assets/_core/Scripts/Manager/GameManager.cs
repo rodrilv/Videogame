@@ -85,18 +85,21 @@ public class GameManager : MonoBehaviour
         monedasText.text = ("x " + monedas.ToString());
     }
 
-    public void AgregarVida(int _vida)
+    public bool AgregarVida(int _vida)
     {
         if (Player.Vidas >= constantes.MAX_VIDAS)
         {
             Player.Vidas = constantes.MAX_VIDAS;
+            return true;
         }
         else if(Player.Vidas < constantes.MAX_VIDAS)
         {
             Player.Vidas = Player.Vidas + 1;
             vidasList[_vida].PrenderVida();
             AudioManager.Instancia.Audio_Vida();
+            return false;
         }
+        return false;
     }
 
     public void QuitarVida(int _vidas)
