@@ -16,8 +16,7 @@ __The Game is now available to play in WebGL format (Link below) I'll continue w
 [Alien.exe here!](https://sprightly-sunburst-ec24bd.netlify.app)
 
 Controls:
-
- A - D: Strafing Left and Right
- Space: Jump.
- E: Interact
- F: Fire!!!!
+- A - D: Strafing Left and Right
+- Space: Jump.
+- E: Interact
+- F: Fire!!!!
