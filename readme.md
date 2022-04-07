@@ -10,6 +10,7 @@ __The Game is now available to play in WebGL format (Link below) I'll continue w
 ## Thanks a lot to [Kenney](https://www.kenney.nl) for providing beautiful and free Assets
 
 ## Thanks to [TheMushRoomKingdom](https://themushroomkingdom.net) for providing amazing sound FX.
+##  And Special Thanks to my teacher, who was guiding me (us) in the whole development and make this possible :')
 
 
 [Alien.exe here!](https://sprightly-sunburst-ec24bd.netlify.app)
